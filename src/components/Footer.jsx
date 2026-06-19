@@ -110,7 +110,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .footer {
           background: #0056B3;
           color: white;

@@ -170,7 +170,7 @@ const Home = () => {
         </div>
       </section>
 
-      <style jsx>{`
+      <style>{`
         .hero {
           background: linear-gradient(135deg, #007BFF 0%, #0056B3 100%);
           color: white;

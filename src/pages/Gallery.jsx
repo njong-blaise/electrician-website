@@ -226,7 +226,7 @@ const Gallery = () => {
         )}
       </AnimatePresence>
 
-      <style jsx>{`
+      <style>{`
         .page-hero {
           background: linear-gradient(135deg, #007BFF 0%, #0056B3 100%);
           color: white;
