@@ -65,7 +65,7 @@ const About = () => {
             >
               <h2>Professional Biography</h2>
               <p>
-                With over 15 years of experience in the electrical industry, I have established myself as a trusted 
+                With over 10 years of experience in the electrical industry, I have established myself as a trusted 
                 electrician serving both residential and commercial clients. My journey began with a passion for 
                 understanding how electrical systems work, which led me to pursue formal training and certifications.
               </p>

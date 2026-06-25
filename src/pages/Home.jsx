@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { FaBolt, FaTools, FaSolarPanel, FaPowerOff, FaVideo, FaWrench, FaPhone, FaCheckCircle, FaAward, FaUsers } from 'react-icons/fa'
+import heroPro from '../image/hero-pro.png'
 
 const Home = () => {
   const services = [
@@ -41,7 +42,7 @@ const Home = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              Professional electrician with over 15 years of experience providing quality electrical solutions for homes and businesses. Your safety and satisfaction are my top priorities.
+              Professional electrician with over 10 years of experience providing quality electrical solutions for homes and businesses. Your safety and satisfaction are my top priorities.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -49,7 +50,7 @@ const Home = () => {
               transition={{ delay: 0.6, duration: 0.8 }}
               className="hero-buttons"
             >
-              <a href="tel:+1234567890" className="btn btn-primary">
+              <a href="tel:+237 671760185" className="btn btn-primary">
                 <FaPhone />
                 Call Now
               </a>
@@ -65,8 +66,7 @@ const Home = () => {
             className="hero-image"
           >
             <div className="hero-image-placeholder">
-              <FaBolt className="hero-icon" />
-              <p>Professional Electrician</p>
+              <img src={heroPro} alt="Professional electrician" className="hero-pro-image" />
             </div>
           </motion.div>
         </div>
@@ -246,21 +246,18 @@ const Home = () => {
         .hero-image-placeholder {
           background: rgba(255, 255, 255, 0.1);
           border-radius: 20px;
-          padding: 60px;
+          padding: 20px 20px 0;
           text-align: center;
           backdrop-filter: blur(10px);
           border: 2px solid rgba(255, 255, 255, 0.2);
+          overflow: hidden;
         }
 
-        .hero-icon {
-          font-size: 8rem;
-          color: #FFC107;
-          margin-bottom: 1rem;
-        }
-
-        .hero-image-placeholder p {
-          font-size: 1.5rem;
-          font-weight: 600;
+        .hero-pro-image {
+          display: block;
+          width: min(100%, 420px);
+          margin: 0 auto;
+          object-fit: contain;
         }
 
         .services-preview {
@@ -397,11 +394,7 @@ const Home = () => {
           }
 
           .hero-image-placeholder {
-            padding: 40px;
-          }
-
-          .hero-icon {
-            font-size: 6rem;
+            padding: 18px 18px 0;
           }
         }
 

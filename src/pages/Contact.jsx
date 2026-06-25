@@ -34,14 +34,14 @@ const Contact = () => {
     {
       icon: FaMapMarkerAlt,
       title: 'Location',
-      value: '123 Electric Avenue, City, State 12345',
+      value: 'Bamenda, Nkwen',
       link: null
     },
     {
       icon: FaPhone,
       title: 'Phone',
-      value: '+1 (234) 567-890',
-      link: 'tel:+1234567890'
+      value: '+237 671760185',
+      link: 'tel:+237 671760185'
     },
     {
       icon: FaEnvelope,
@@ -52,8 +52,8 @@ const Contact = () => {
     {
       icon: FaWhatsapp,
       title: 'WhatsApp',
-      value: '+1 (234) 567-890',
-      link: 'https://wa.me/1234567890'
+      value: '+237 671760185',
+      link: 'https://wa.me/+237671760185'
     }
   ]
 
@@ -139,7 +139,7 @@ const Contact = () => {
 
               <div className="whatsapp-section">
                 <a
-                  href="https://wa.me/1234567890"
+                  href="https://wa.me/+237 671760185"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="whatsapp-button"
@@ -235,9 +235,9 @@ const Contact = () => {
             <h2>Find Us</h2>
             <div className="map-placeholder">
               <FaMapMarkerAlt className="map-icon" />
-              <p>123 Electric Avenue, City, State 12345</p>
+              <p>Bamenda, Nkwen</p>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=123+Electric+Avenue"
+                href="https://www.google.com/maps/search/?api=1&query=bamenda+nkwen"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="map-link"

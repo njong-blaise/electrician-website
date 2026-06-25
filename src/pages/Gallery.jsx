@@ -1,6 +1,15 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FaTimes, FaChevronLeft, FaChevronRight, FaExpand } from 'react-icons/fa'
+import image1 from '../image/1.jpeg'
+import image2 from '../image/2.jpeg'
+import image3 from '../image/3.jpeg'
+import image4 from '../image/4.jpeg'
+import image5 from '../image/5.jpeg'
+import image6 from '../image/6.jpeg'
+import image7 from '../image/7.jpeg'
+import image8 from '../image/8.jpeg'
+import image9 from '../image/9.jpeg'
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null)
@@ -12,63 +21,63 @@ const Gallery = () => {
       title: 'Residential Wiring Project',
       category: 'House Wiring',
       description: 'Complete rewiring of a 3-bedroom house with modern electrical system',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop'
+      image: image1
     },
     {
       id: 2,
       title: 'Solar Panel Installation',
       category: 'Solar Installation',
       description: '10kW solar power system installation for residential property',
-      image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=600&fit=crop'
+      image: image2
     },
     {
       id: 3,
       title: 'Commercial Lighting',
       category: 'Lighting',
       description: 'LED lighting upgrade for office building with smart controls',
-      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop'
+      image: image3
     },
     {
       id: 4,
       title: 'Generator Installation',
       category: 'Generator',
       description: 'Standby generator installation for backup power solution',
-      image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop'
+      image: image4
     },
     {
       id: 5,
       title: 'CCTV Security System',
       category: 'Security',
       description: 'Complete CCTV installation with 16 cameras and remote monitoring',
-      image: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=800&h=600&fit=crop'
+      image: image5
     },
     {
       id: 6,
       title: 'Industrial Electrical',
       category: 'Industrial',
       description: 'High-voltage electrical system for manufacturing facility',
-      image: 'https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=800&h=600&fit=crop'
+      image: image6
     },
     {
       id: 7,
       title: 'Smart Home Integration',
       category: 'Smart Home',
       description: 'Complete smart home electrical system with automation',
-      image: 'https://images.unsplash.com/photo-1558002038-1091a1661116?w=800&h=600&fit=crop'
+      image: image7
     },
     {
       id: 8,
       title: 'EV Charging Station',
       category: 'EV Charging',
       description: 'Electric vehicle charging station installation for commercial property',
-      image: 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800&h=600&fit=crop'
+      image: image8
     },
     {
       id: 9,
       title: 'Panel Upgrade',
       category: 'Electrical Panel',
       description: 'Electrical panel upgrade from 100A to 200A for increased capacity',
-      image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&h=600&fit=crop'
+      image: image9
     }
   ]
 
@@ -82,12 +91,12 @@ const Gallery = () => {
   }
 
   const navigateImage = (direction) => {
-    if (direction === 'next') {
-      setCurrentIndex((prev) => (prev + 1) % projects.length)
-    } else {
-      setCurrentIndex((prev) => (prev - 1 + projects.length) % projects.length)
-    }
-    setSelectedImage(projects[currentIndex])
+    const nextIndex = direction === 'next'
+      ? (currentIndex + 1) % projects.length
+      : (currentIndex - 1 + projects.length) % projects.length
+
+    setCurrentIndex(nextIndex)
+    setSelectedImage(projects[nextIndex])
   }
 
   const handleKeyDown = (e) => {
