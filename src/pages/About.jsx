@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { FaGraduationCap, FaCertificate, FaTools, FaAward, FaShieldAlt, FaClock, FaUserTie } from 'react-icons/fa'
+import heroPro from '../image/hero-pro.png'
 
 const About = () => {
   const skills = [
@@ -52,8 +53,7 @@ const About = () => {
               className="about-image"
             >
               <div className="about-image-placeholder">
-                <FaUserTie className="about-icon" />
-                <p>Professional Electrician</p>
+                <img src={heroPro} alt="Professional electrician" className="about-profile-image" />
               </div>
             </motion.div>
             <motion.div
@@ -232,21 +232,17 @@ const About = () => {
         .about-image-placeholder {
           background: #F8F9FA;
           border-radius: 20px;
-          padding: 60px;
+          padding: 20px 20px 0;
           text-align: center;
           border: 2px solid #007BFF;
+          overflow: hidden;
         }
 
-        .about-icon {
-          font-size: 8rem;
-          color: #007BFF;
-          margin-bottom: 1rem;
-        }
-
-        .about-image-placeholder p {
-          font-size: 1.5rem;
-          font-weight: 600;
-          color: #333;
+        .about-profile-image {
+          display: block;
+          width: min(100%, 420px);
+          margin: 0 auto;
+          object-fit: contain;
         }
 
         .about-text h2 {
@@ -437,11 +433,7 @@ const About = () => {
           }
 
           .about-image-placeholder {
-            padding: 40px;
-          }
-
-          .about-icon {
-            font-size: 6rem;
+            padding: 18px 18px 0;
           }
         }
 
